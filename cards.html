@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Учебное портфолио начинающего frontend-разработчика: Task 1 · Карточки.">
+    <title>
+      Task 1 · Карточки — Учебное портфолио
+    </title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/tasks.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      К содержимому
+    </a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">Моё портфолио</a>
+        <nav aria-label="Основная навигация">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html">
+                Навигация
+              </a>
+            </li>
+            <li>
+              <a href="cards.html" aria-current="page">
+                Карточки
+              </a>
+            </li>
+            <li>
+              <a href="layout.html">
+                Макет
+              </a>
+            </li>
+            <li>
+              <a href="gallery.html">
+                Галерея
+              </a>
+            </li>
+            <li>
+              <a href="portfolio.html">
+                Портфолио
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main">
+        <div class="page-intro">
+          <h1>Task 1. Карточки проектов</h1>
+          <p>
+            Три карточки с изображениями, описаниями и ссылками на другие задания.
+          </p>
+        </div>
+        <section class="card-row" aria-label="Учебные проекты">
+          <article class="card">
+            <img src="assets/images/study-01.svg" alt="Схема проекта «Страница-портфолио»" width="620" height="400">
+            <div class="card-body">
+              <h2>
+                Страница-портфолио
+              </h2>
+              <p>
+                Учебный макет с проектами и блоком обо мне.
+              </p>
+              <a class="button" href="portfolio.html">
+                Открыть портфолио
+              </a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/images/study-02.svg" alt="Схема проекта «Сетка интерфейсов»" width="620" height="400">
+            <div class="card-body">
+              <h2>
+                Сетка интерфейсов
+              </h2>
+              <p>
+                Девять схем интерфейсов. Эксперимент с равными колонками, отступами и подписями, доступными с клавиатуры.
+              </p>
+              <a class="button" href="gallery.html">
+                Открыть галерею
+              </a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/images/study-03.svg" alt="Схема проекта «Рабочее пространство»" width="620" height="400">
+            <div class="card-body">
+              <h2>
+                Рабочее пространство
+              </h2>
+              <p>
+                Страница с боковой панелью и основным содержимым. Именованные области помогают наглядно описать расположение блоков и изменить его на телефоне.
+              </p>
+              <a class="button" href="layout.html">
+                Открыть макет
+              </a>
+            </div>
+          </article>
+        </section>
+        <aside class="note">
+          <p>
+            <strong>
+              Что здесь делает Flexbox?
+            </strong>
+            Располагает карточки в ряд, выравнивает их по высоте и переносит, когда места становится меньше. Внутри каждой карточки кнопка остаётся внизу.
+          </p>
+        </aside>
+      </main>
+      <footer class="site-footer">
+        <p>
+          © Дарын · 2528
+        </p>
+        <p>
+          Assignment #2
+          <span aria-hidden="true">
+            /
+          </span>
+          HTML + CSS
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

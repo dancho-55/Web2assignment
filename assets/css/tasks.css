@@ -1,0 +1,238 @@
+.task-list li {
+  margin-bottom: 12px;
+}
+
+/* Task 1: карточки одной строки растягиваются до одинаковой высоты. */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--gap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 280px;
+  min-width: 0;
+  background: white;
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  box-shadow: 0 3px 8px #bbbbbb;
+}
+
+.card > img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: var(--padding);
+}
+
+.card-body h2 {
+  margin-top: 0;
+}
+
+/* Свободное место над кнопкой прижимает её к низу. */
+.card-body .button {
+  margin-top: auto;
+}
+
+/* Task 2: две колонки, три строки и четыре именованные области. */
+.area-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  column-gap: var(--gap);
+}
+
+.area-layout > .site-header {
+  grid-area: header;
+}
+
+.area-layout > .layout-sidebar {
+  grid-area: sidebar;
+  align-self: start;
+  margin: 30px 0;
+}
+
+.area-layout > main {
+  grid-area: main;
+}
+
+.area-layout > .site-footer {
+  grid-area: footer;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 10px 0;
+}
+
+.lesson {
+  margin-bottom: var(--gap);
+}
+
+/* Task 3: девять изображений образуют сетку 3 × 3. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, 200px);
+  gap: var(--gap);
+}
+
+.gallery-item {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.gallery-item a {
+  display: block;
+  height: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  background: #222222;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-item:hover figcaption,
+.gallery-item:focus-within figcaption {
+  opacity: 1;
+}
+
+.gallery-item a:focus-visible {
+  outline-offset: -4px;
+}
+
+/* На сенсорном устройстве подпись видна без наведения. */
+@media (hover: none), (pointer: coarse) {
+  .gallery-item figcaption {
+    opacity: 1;
+  }
+}
+
+/* Task 4: Grid для страницы, Flexbox внутри карточек. */
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer";
+  column-gap: var(--gap);
+}
+
+.portfolio-layout > .site-header {
+  grid-area: header;
+}
+
+.portfolio-layout > main {
+  grid-area: main;
+}
+
+.portfolio-layout > .about {
+  grid-area: sidebar;
+  align-self: start;
+  margin: 30px 0;
+}
+
+.portfolio-layout > .site-footer {
+  grid-area: footer;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.project-card h2,
+.project-card p {
+  margin: 0;
+}
+
+.project-card .button {
+  margin-top: auto;
+}
+
+/* Планшет: две колонки в галерее. */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: 200px;
+  }
+}
+
+/* Телефон: блоки идут друг за другом. */
+@media (max-width: 650px) {
+  .site-shell {
+    padding: 0 12px;
+  }
+
+  .area-layout,
+  .portfolio-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .area-layout {
+    grid-template-areas: "header" "sidebar" "main" "footer";
+  }
+
+  .portfolio-layout {
+    grid-template-areas: "header" "main" "sidebar" "footer";
+  }
+
+  .area-layout > .layout-sidebar {
+    margin: 20px 0 0;
+  }
+
+  .portfolio-layout > .about {
+    margin: 0 0 20px;
+  }
+
+  .gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery-item figcaption {
+    opacity: 1;
+  }
+}
