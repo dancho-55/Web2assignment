@@ -1,4 +1,6 @@
-# Assignment #2 — Advanced CSS: Flexbox & Grid
+# Web2assignment — Assignment #2
+
+Advanced CSS: Flexbox & Grid. Assignment 2 frontend.
 
 Простое учебное портфолио начинающего frontend-разработчика: пять отдельных страниц на чистых HTML5 и CSS3. JavaScript, фреймворков, зависимостей и сборки нет. Все изображения локальные; проект работает без интернета.
 
