@@ -1,4 +1,3 @@
-/* Общие цвета и отступы. */
 :root {
   --background: #f2f2f2;
   --text: #222222;
@@ -28,7 +27,6 @@ body {
   padding: 0 var(--padding);
 }
 
-/* Task 0: логотип и меню выравниваются с помощью Flexbox. */
 .site-header {
   display: flex;
   justify-content: space-between;

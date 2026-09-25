@@ -2,7 +2,6 @@
   margin-bottom: 12px;
 }
 
-/* Task 1: карточки одной строки растягиваются до одинаковой высоты. */
 .card-row {
   display: flex;
   flex-wrap: wrap;
@@ -41,12 +40,10 @@
   margin-top: 0;
 }
 
-/* Свободное место над кнопкой прижимает её к низу. */
 .card-body .button {
   margin-top: auto;
 }
 
-/* Task 2: две колонки, три строки и четыре именованные области. */
 .area-layout {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -90,7 +87,6 @@
   margin-bottom: var(--gap);
 }
 
-/* Task 3: девять изображений образуют сетку 3 × 3. */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -137,14 +133,12 @@
   outline-offset: -4px;
 }
 
-/* На сенсорном устройстве подпись видна без наведения. */
 @media (hover: none), (pointer: coarse) {
   .gallery-item figcaption {
     opacity: 1;
   }
 }
 
-/* Task 4: Grid для страницы, Flexbox внутри карточек. */
 .portfolio-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
@@ -191,7 +185,6 @@
   margin-top: auto;
 }
 
-/* Планшет: две колонки в галерее. */
 @media (max-width: 900px) {
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -200,7 +193,6 @@
   }
 }
 
-/* Телефон: блоки идут друг за другом. */
 @media (max-width: 650px) {
   .site-shell {
     padding: 0 12px;
